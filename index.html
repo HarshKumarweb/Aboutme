@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - Harsh Kumar</title>
+  <style>
+    body {
+      background-color: rgb(0, 106, 166); /* Blue background color */
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    
+    .container {
+      max-width: 600px;
+      padding: 40px;
+      background-color: rgba(255, 255, 255, 0.8); /* Translucent white card background */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      border-radius: 5px;
+    }
+    
+    h1 {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .profile-photo {
+      display: block;
+      margin: 0 auto 20px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    
+    p {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    
+    ul {
+      padding-left: 20px;
+      margin-bottom: 30px;
+    }
+    
+    ul li {
+      margin-bottom: 10px;
+    }
+    
+    a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>About Me</h1>
+    <img src="Snapchat-560069317.jpg" alt="Profile Photo" class="profile-photo">
+    <p><strong>Name:</strong> <span id="name"></span></p>
+    <p><strong>Date of Birth:</strong> <span id="dob"></span></p>
+    <p><strong>Email:</strong> <span id="email"></span></p>
+    <p><strong>Phone:</strong> <span id="phone"></span></p>
+    <p><strong>My Websites:</strong></p>
+    <ul id="websites">
+      <li><a href="https://aboutearth.netlify.app" target="_blank">https://aboutearth.netlify.app</a></li>
+      <li><a href="https://aboutmars.netlify.app" target="_blank">https://aboutmars.netlify.app</a></li>
+    </ul>
+  </div>
+
+  <script>
+    // JavaScript code to populate the information
+    const info = {
+      name: "Harsh Kumar",
+      dob: "07/11/2009",
+      email: "harshkum704@gmail.com",
+      phone: "7740061746"
+    };
+
+    // Function to update the HTML with the information
+    function updateInfo() {
+      document.getElementById("name").textContent = info.name;
+      document.getElementById("dob").textContent = info.dob;
+      document.getElementById("email").textContent = info.email;
+      document.getElementById("phone").textContent = info.phone;
+    }
+
+    // Call the updateInfo function when the page is loaded
+    window.addEventListener("DOMContentLoaded", updateInfo);
+  </script>
+</body>
+</html>
